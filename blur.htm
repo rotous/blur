@@ -42,7 +42,9 @@
 				var bgEl = document.getElementById('bg');
 				var bodyEl = document.getElementsByTagName('body')[0];
 
-				console.log(navigator.sayswho, navigator.sayswho==='MSIE 9');
+				bodyEl.className += (bodyEl.className.length>0 ? ' ' : '') + navigator.sayswho.split(' ')[0];
+				bodyEl.className += ' ' + navigator.sayswho.replace(' ','');
+				console.log(navigator.sayswho, navigator.sayswho==='MSIE 9', bodyEl.className);
 				function onResize() {
 					cntEl.style.top = (bodyEl.clientHeight - 380) / 2 + 'px';
 					cntEl.style.left = (bodyEl.clientWidth - 680) / 2 + 'px';

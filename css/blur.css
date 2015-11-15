@@ -29,7 +29,13 @@ body, #bg
 	left: 0;
 	top: 0;
 	-webkit-filter: blur(10px);
-	-ms-filter: blur(10px); 
 	filter: blur(10px);
-	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='100'); /* IE lte 9 */	
+}
+
+body.MSIE9 #bg{
+	filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='100');	
+}
+body.MSIE10 #bg,
+body.MSIE11 #bg{
+	background-image: url(../images/bg_blur.jpg);
 }
